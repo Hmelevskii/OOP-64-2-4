@@ -48,7 +48,7 @@ class Post(models.Model):
     )
 
     tags = models.ManyToManyField(Tag, null=True, blank=True)
-
+    is_active = models.BooleanField(default=False)
     def __str__(self) -> str:
         return f"{self.title}"
 
