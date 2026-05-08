@@ -18,9 +18,13 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path 
 
 from posts.views import create_post, get_post, get_posts_by_category, home, post
+
+from django.contrib import admin#1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ 
+from django.urls import path #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ 
+from posts.views import post_dz
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,6 +33,9 @@ urlpatterns = [
     path("posts/<int:id>/", get_post, name="post"),
     path("posts/category/<int:id>/", get_posts_by_category, name="category"),
     path("posts/create", create_post, name="create_post"),
+    path("admin/", admin.site.urls), #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ #1 ДЗ ДЗ ДЗ ДЗ ДЗ ДЗД ЗД ЗД ЗДЗ ДЗ ДЗ 
+    path("posts/dz/<int:id>/", post_dz),
 ]
+
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
